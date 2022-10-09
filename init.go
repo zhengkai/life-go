@@ -2,20 +2,9 @@ package life
 
 import (
 	"context"
-	"errors"
 	"os"
 	"os/signal"
 	"syscall"
-)
-
-// ...
-var (
-	Stop         bool
-	CTX          context.Context
-	cancel       context.CancelFunc
-	BeforeCancel func()
-
-	ErrStop = errors.New(`life stop`)
 )
 
 func init() {
